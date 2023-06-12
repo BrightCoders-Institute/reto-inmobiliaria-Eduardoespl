@@ -2,6 +2,7 @@
 import React from 'react';
 import {StyleSheet, View, Text, Image} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import data from '../data/data.json';
 
 type props = {
   title: string;
@@ -10,15 +11,18 @@ type props = {
   bathrooms: number;
   size: number;
   price: number;
+  rate: number;
 };
 
-export default function InmobiliariaCard(props: props): JSX.Element {
+export default function InmobiliariaCard(): JSX.Element {
+  const props: props = data[0];
+
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
         <View style={styles.rateContainer}>
           <Icon name="star" size={15} color="#EEBA00" />
-          <Text style={styles.rate}> 4.5 </Text>
+          <Text style={styles.rate}> {props.rate} </Text>
         </View>
         <Image
           style={styles.image}
@@ -29,28 +33,27 @@ export default function InmobiliariaCard(props: props): JSX.Element {
       </View>
 
       <View style={styles.infoContainer}>
-        <Text style={styles.title}>{props.title}Titulo</Text>
+        <Text style={styles.title}>{props.title}</Text>
         <Text style={styles.ubication}>
-          {props.ubication}
           <Icon name="map-marker-outline" size={20} color="#200e32" />
-          3517 W. Gray St. Utica
+          {props.ubication}
         </Text>
         <View style={styles.detailsContainer}>
           <Text style={styles.rooms}>
-            <Icon name="bed-king-outline" size={25} color="#999" /> 3
+            <Icon name="bed-king-outline" size={25} color="#999" />
             {props.rooms}
           </Text>
           <Text style={styles.bathrooms}>
-            <Icon name="shower" size={25} color="#999" />2 {props.bathrooms}
+            <Icon name="shower" size={25} color="#999" /> {props.bathrooms}
           </Text>
           <Text style={styles.size}>
             <Icon name="move-resize" size={25} color="#999" />
             {props.size}
-            230 ft2
+            ft2
           </Text>
         </View>
         <View style={styles.footerContainer}>
-          <Text style={styles.price}>$440{props.price}/m</Text>
+          <Text style={styles.price}>${props.price}/m</Text>
           <View style={styles.likeContainer}>
             <Icon name="heart" size={20} color="#fff" />
           </View>
@@ -91,10 +94,12 @@ const styles = StyleSheet.create({
     fontSize: 25,
     color: '#151525',
     fontWeight: '500',
+    marginBottom: 5,
   },
   ubication: {
     fontSize: 15,
     color: '#737373',
+    marginBottom: 5,
   },
   rooms: {
     fontSize: 16,
@@ -141,7 +146,7 @@ const styles = StyleSheet.create({
     height: 30,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 5,
+    marginTop: 10,
   },
   footerContainer: {
     flexDirection: 'row',

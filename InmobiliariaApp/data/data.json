@@ -1,0 +1,20 @@
+[
+  {
+    "title": "The Willows",
+    "ubication": "3517 W. Gray St. Utica",
+    "rooms": 3,
+    "bathrooms": 2,
+    "size": 230,
+    "price": 440,
+    "rate": 4.5
+  },
+  {
+    "title": "The Meadows",
+    "ubication": "Roseville, MI 48066",
+    "rooms": 4,
+    "bathrooms": 3,
+    "size": 300,
+    "price": 350,
+    "rate": 2.5
+  }
+]
