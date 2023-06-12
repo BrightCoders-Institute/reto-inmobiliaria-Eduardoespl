@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import data from '../data/data.json';
 
 type props = {
+  id: number;
   title: string;
   ubication: string;
   rooms: number;
@@ -14,8 +15,8 @@ type props = {
   rate: number;
 };
 
-export default function InmobiliariaCard(): JSX.Element {
-  const props: props = data[0];
+export default function InmobiliariaCard({id}: props): JSX.Element {
+  const props = data[id];
 
   return (
     <View style={styles.container}>
@@ -70,7 +71,6 @@ const styles = StyleSheet.create({
     margin: 10,
     flexDirection: 'row',
     overflow: 'hidden',
-    elevation: 5,
     width: '95%',
     height: 150,
   },

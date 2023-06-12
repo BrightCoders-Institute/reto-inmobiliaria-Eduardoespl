@@ -7,31 +7,23 @@
 
 import React from 'react';
 import InmobiliariaCard from './components/InmobiliariaCard';
-import {StyleSheet} from 'react-native';
+import {SafeAreaView, StyleSheet} from 'react-native';
 
 function App(): JSX.Element {
   // eslint-disable-next-line prettier/prettier, no-trailing-spaces
   return ( 
-    <InmobiliariaCard />
+    <SafeAreaView style={styles.container}>
+      <InmobiliariaCard id={0} />
+      <InmobiliariaCard id={1} />
+      <InmobiliariaCard id={2} />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
   },
 });
 
