@@ -1,4 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {StyleSheet, View, Text, Image} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -21,16 +20,16 @@ export default function InmobiliariaCard({id}: props): JSX.Element {
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
+        <Image
+          style={styles.image}
+          source={{
+            uri: 'https://cdn.forbes.com.mx/2020/07/hoteles-Grand-Velas-Resorts-e1596047698604.jpg',
+          }}
+        />
         <View style={styles.rateContainer}>
           <Icon name="star" size={15} color="#EEBA00" />
           <Text style={styles.rate}> {props.rate} </Text>
         </View>
-        <Image
-          style={styles.image}
-          source={{
-            uri: 'http://placekitten.com/240/240',
-          }}
-        />
       </View>
 
       <View style={styles.infoContainer}>
@@ -76,12 +75,13 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     flex: 4,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   image: {
     width: '70%',
     height: '70%',
     alignSelf: 'center',
-    marginTop: '15%',
     borderRadius: 10,
   },
   infoContainer: {
@@ -120,10 +120,11 @@ const styles = StyleSheet.create({
     paddingTop: 4,
   },
   rateContainer: {
-    flexDirection: 'row',
     position: 'absolute',
     top: 90,
-    left: 45,
+    left: '50%',
+    transform: [{translateX: -25}],
+    flexDirection: 'row',
     backgroundColor: '#FBEDB7',
     borderRadius: 50,
     padding: 5,
