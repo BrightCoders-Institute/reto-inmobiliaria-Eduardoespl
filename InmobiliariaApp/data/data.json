@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 0,
     "title": "The Willows",
     "ubication": "3517 W. Gray St. Utica",
     "rooms": 3,
@@ -10,7 +10,7 @@
     "rate": 4.5
   },
   {
-    "id": 2,
+    "id": 1,
     "title": "The Meadows",
     "ubication": "Roseville, MI 48066",
     "rooms": 4,
@@ -20,7 +20,7 @@
     "rate": 2.5
   },
   {
-    "id": 3,
+    "id": 2,
     "title": "The Marshmellows",
     "ubication": "Roseville, MI 48066",
     "rooms": 4,
@@ -28,5 +28,55 @@
     "size": 300,
     "price": 350,
     "rate": 5
+  },
+  {
+    "id": 3,
+    "title": "Cozy Cottage",
+    "ubication": "Seattle, WA 98101",
+    "rooms": 2,
+    "bathrooms": 1,
+    "size": 150,
+    "price": 200,
+    "rate": 4.5
+  },
+  {
+    "id": 4,
+    "title": "Luxurious Villa",
+    "ubication": "Los Angeles, CA 90001",
+    "rooms": 6,
+    "bathrooms": 5,
+    "size": 600,
+    "price": 800,
+    "rate": 4.8
+  },
+  {
+    "id": 5,
+    "title": "Seaside Retreat",
+    "ubication": "Miami, FL 33101",
+    "rooms": 3,
+    "bathrooms": 2,
+    "size": 200,
+    "price": 400,
+    "rate": 4.3
+  },
+  {
+    "id": 6,
+    "title": "Mountain Chalet",
+    "ubication": "Denver, CO 80201",
+    "rooms": 5,
+    "bathrooms": 4,
+    "size": 400,
+    "price": 600,
+    "rate": 4.7
+  },
+  {
+    "id": 7,
+    "title": "Urban Loft",
+    "ubication": "New York, NY 10001",
+    "rooms": 1,
+    "bathrooms": 1,
+    "size": 100,
+    "price": 150,
+    "rate": 4.2
   }
 ]
