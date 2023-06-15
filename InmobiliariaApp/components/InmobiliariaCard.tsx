@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet, View, Text, Image} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import IconText from './IconText';
 import data from '../data/data.json';
 
 type props = {
@@ -39,18 +40,9 @@ export default function InmobiliariaCard({id}: props): JSX.Element {
           {props.ubication}
         </Text>
         <View style={styles.detailsContainer}>
-          <Text style={styles.rooms}>
-            <Icon name="bed-king-outline" size={25} color="#999" />
-            {props.rooms}
-          </Text>
-          <Text style={styles.bathrooms}>
-            <Icon name="shower" size={25} color="#999" /> {props.bathrooms}
-          </Text>
-          <Text style={styles.size}>
-            <Icon name="move-resize" size={25} color="#999" />
-            {props.size}
-            ft2
-          </Text>
+          <IconText iconName="bed-king-outline" text={props.rooms} />
+          <IconText iconName="shower" text={props.bathrooms} />
+          <IconText iconName="move-resize" text={`${props.size} ft2`} />
         </View>
         <View style={styles.footerContainer}>
           <Text style={styles.price}>${props.price}/m</Text>
