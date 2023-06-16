@@ -34,7 +34,9 @@ export default function InmobiliariaCard({id}: props): JSX.Element {
       </View>
 
       <View style={styles.infoContainer}>
-        <Text style={styles.title}>{props.title}</Text>
+        <Text style={styles.title} testID="title">
+          {props.title}
+        </Text>
         <Text style={styles.ubication}>
           <Icon name="map-marker-outline" size={20} color="#200e32" />
           {props.ubication}

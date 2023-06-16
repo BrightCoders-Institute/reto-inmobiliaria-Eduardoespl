@@ -5,7 +5,7 @@ import data from '../data/data.json';
 
 export default function VerticalList(): JSX.Element {
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="inmobiliariaCard">
       <FlatList
         data={data}
         renderItem={({item}) => <InmobiliariaCard {...item} />}
